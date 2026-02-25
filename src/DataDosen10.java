@@ -1,5 +1,5 @@
 public class DataDosen10 {
-    public void dataSemuaDosen(Dosen10[] arrayOfDosen) {
+    void dataSemuaDosen(Dosen10[] arrayOfDosen) {
         int i = 1;
         for (Dosen10 d : arrayOfDosen) {
             System.out.println("Data Dosen ke-" + i++);
@@ -7,7 +7,7 @@ public class DataDosen10 {
         }
     }
 
-    public void jumlahDosenPerJenisKelamin(Dosen10[] arrayOfDosen) {
+    void jumlahDosenPerJenisKelamin(Dosen10[] arrayOfDosen) {
         int pria = 0, wanita = 0;
         for (Dosen10 d : arrayOfDosen) {
             if (d.jenisKelamin) pria++;
@@ -17,7 +17,7 @@ public class DataDosen10 {
         System.out.println("Jumlah Dosen Wanita : " + wanita);
     }
 
-    public void rerataUsiaDosenPerJenisKelamin(Dosen10[] arrayOfDosen) {
+    void rerataUsiaDosenPerJenisKelamin(Dosen10[] arrayOfDosen) {
         int totalPria = 0, totalWanita = 0;
         int countPria = 0, countWanita = 0;
 
@@ -35,7 +35,7 @@ public class DataDosen10 {
         System.out.println("Rata-rata Usia Dosen Wanita : " + (totalWanita / countWanita));
     }
 
-    public void infoDosenPalingTua(Dosen10[] arrayOfDosen) {
+    void infoDosenPalingTua(Dosen10[] arrayOfDosen) {
         Dosen10 tertua = arrayOfDosen[0];
         for (Dosen10 d : arrayOfDosen) {
             if (d.usia > tertua.usia) {
@@ -46,7 +46,7 @@ public class DataDosen10 {
         tampilkan(tertua);
     }
 
-    public void infoDosenPalingMuda(Dosen10[] arrayOfDosen) {
+    void infoDosenPalingMuda(Dosen10[] arrayOfDosen) {
         Dosen10 termuda = arrayOfDosen[0];
         for (Dosen10 d : arrayOfDosen) {
             if (d.usia < termuda.usia) {
@@ -57,7 +57,7 @@ public class DataDosen10 {
         tampilkan(termuda);
     }
 
-    private void tampilkan(Dosen10 d) {
+    void tampilkan(Dosen10 d) {
         System.out.println("Kode          : " + d.kode);
         System.out.println("Nama          : " + d.nama);
         System.out.println("Jenis Kelamin : " + d.getJenisKelamin());

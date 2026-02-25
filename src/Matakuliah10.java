@@ -17,7 +17,7 @@ public class Matakuliah10 {
         this.jumlahJam = jumlahJam;
     }
 
-    public void tambahData() {
+    void tambahData() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Kode        : ");
         kode = sc.nextLine();
@@ -30,7 +30,7 @@ public class Matakuliah10 {
         sc.nextLine();
     }
 
-    public void cetakInfo() {
+    void cetakInfo() {
         System.out.println("Kode        : " + kode);
         System.out.println("Nama        : " + nama);
         System.out.println("Sks         : " + sks);
