@@ -10,8 +10,11 @@ public class DataDosen10 {
     void jumlahDosenPerJenisKelamin(Dosen10[] arrayOfDosen) {
         int pria = 0, wanita = 0;
         for (Dosen10 d : arrayOfDosen) {
-            if (d.jenisKelamin) pria++;
-            else wanita++;
+            if (d.jenisKelamin) {
+                pria++;
+            } else {
+                wanita++;
+            }
         }
         System.out.println("Jumlah Dosen Pria   : " + pria);
         System.out.println("Jumlah Dosen Wanita : " + wanita);
@@ -31,8 +34,9 @@ public class DataDosen10 {
             }
         }
 
-        System.out.println("Rata-rata Usia Dosen Pria   : " + (totalPria / countPria));
-        System.out.println("Rata-rata Usia Dosen Wanita : " + (totalWanita / countWanita));
+        System.out.println("Rata-rata Usia Dosen Pria   : " + (countPria > 0 ? (double) totalPria / countPria : 0));
+        System.out
+                .println("Rata-rata Usia Dosen Wanita : " + (countWanita > 0 ? (double) totalWanita / countWanita : 0));
     }
 
     void infoDosenPalingTua(Dosen10[] arrayOfDosen) {

@@ -14,9 +14,9 @@ public class DosenDemo10 {
             System.out.print("Nama          : ");
             String nama = sc.nextLine();
 
-            System.out.print("Jenis Kelamin (P/W) : ");
-            char jk = sc.next().charAt(0);
-            Boolean jenisKelamin = (jk == 'P' || jk == 'p');
+            System.out.print("Jenis Kelamin : ");
+            // char jk = sc.next().charAt(0);
+            Boolean jenisKelamin = sc.nextLine().equalsIgnoreCase("Pria");
 
             System.out.print("Usia          : ");
             int usia = sc.nextInt();
